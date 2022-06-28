@@ -115,7 +115,8 @@
                     <tbody id="tablebody">
 
 
-
+                        
+       
 
                         </tbody>
 
@@ -127,20 +128,27 @@
     
     
     
-       <script >
+       <script  >
 
 let Name=document.querySelector('#name')
 let Email=document.querySelector('#email')
 let Phone=document.querySelector('#phone')
 let tab=document.querySelector("#tablebody")
 
+let rem=document.querySelector('#tablebody')
+
 let form=document.querySelector('#reg')
 
+let Namedata=document.querySelector('#namedata')
+let Emaildata=document.querySelector('#emaildata')
+let Phonedata=document.querySelector('#phonedata')
 
 
 
 
 
+
+// form submit store in localstorage
 
 
 
@@ -183,6 +191,15 @@ let form=document.querySelector('#reg')
     
     
     })
+
+    //////////
+
+
+
+
+
+
+    // display in frontend
     
     let keydata=Object.keys(localStorage)
 
@@ -197,24 +214,69 @@ let form=document.querySelector('#reg')
         loc+=`
         
         <tr class="table-danger" >
-            <th>${data.name}</th>
-            <th>${data.email}</th>
-            <th>${data.phone}</th>
-<th> <button class="btn btn-danger far fa-times float-right btn-sm delete"></button><button class="mr-2 btn btn-warning  btn-sm text-white bg-dark fas fa-edit float-right"></button> 
+            <th id="namedata">${data.name}</th>
+            <th id="emaildata">${data.email}</th>
+            <th id="phonedata">${data.phone}</th>
+<th> <button class="btn btn-danger removebtn far fa-times float-right btn-sm delete" id=${data.phone}  ></button><button class="mr-2 btn btn-warning  btn-sm text-white bg-dark fas fa-edit float-right" id=${data.phone}></button> 
 </th>
         </tr>
-
-
-        
-        
         `
-        
-    
     }
-    
     
     tab.innerHTML=loc
 
+
+    //
+
+
+
+
+rem.addEventListener('click',(e)=>{
+    
+if(e.target.classList.contains('far')){
+
+    let removeitem= e.target.id;
+
+    localStorage.removeItem(removeitem)
+
+    location.reload()
+
+    
+}
+
+
+})
+
+
+rem.addEventListener('click',(e)=>{
+    if(e.target.classList.contains('fas')){
+
+        
+
+let selector=e.target.parentElement.parentElement
+
+let nametxt=selector.querySelector('#namedata').textContent
+let emailtxt=selector.querySelector('#emaildata').textContent
+let phonetxt=selector.querySelector('#phonedata').textContent
+
+
+
+
+Name.value=nametxt
+Email.value=emailtxt
+Phone.value=phonetxt
+
+localStorage.removeItem(e.target.id)
+        
+        
+    }
+})
+    
+
+
+    
+
+   
 
        </script>
 </body>
