@@ -1,0 +1,302 @@
+1)
+
+this refers to current scope-----.
+
+
+
+this also refers to global 
+
+
+
+var ak="amma"
+
+
+
+console.log(this.ak);
+
+
+
+l
+
+
+
+2)
+
+let ax={
+
+    name:"siva",
+
+    
+
+    siva: function(){
+
+
+
+
+
+        console.log(this.name +" paruchuri ")
+
+
+
+    }
+
+
+
+]]
+
+}
+
+
+
+
+
+
+
+ax.siva()
+
+
+
+
+
+3)
+
+class Student{
+
+    constructor(name , age , phonenumber, boardmarks)
+
+
+
+    {
+
+        this.name=name
+
+        this.age=age
+
+        this.phonenumber=phonenumber
+
+        this.boardmarks=boardmarks
+
+    }
+
+}
+
+let stuDetails=new Student("siva",22,9032794085,949)
+
+
+
+console.log(stuDetails);
+
+
+
+4)
+
+
+
+let check=(boardMarks)=>{
+
+
+
+   return  boardMarks>40?"student eligible for colloge":"student is not eligible for college"
+
+    
+
+}
+
+
+
+console.log(check(41));
+
+
+
+5)
+
+class Student{
+
+  constructor(name , age , phonenumber, boardmarks)
+
+
+
+  {
+
+    this.name=name
+
+    this.age=age
+
+    
+
+  }
+
+}
+
+let stuDetails=new Student("siva",22)
+
+let o2=new Student("rajesh",18)
+
+let o3=new Student("ahok",24)
+
+let o4=new Student("sai",22)
+
+let o5=new Student("hari",23)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6)
+
+class student{
+
+    static count=0
+
+  
+
+  
+
+   static numberofstudents(name,age){
+
+    
+
+
+
+console.log(`student name is ${name} and his age is ${age}`);
+
+  
+
+  this.count++
+
+
+
+
+
+  console.log(`number of students ${this.count}`);
+
+    }
+
+  
+
+  }
+
+
+
+  
+
+
+
+  
+
+
+
+  student.numberofstudents("siva",22)
+
+  student.numberofstudents("ashok",24)
+
+  student.numberofstudents("rajesh",18)
+
+
+
+
+
+
+
+
+
+1) arrow functions
+
+
+
+  let a=b=>b
+
+console.log(a(2));
+
+
+
+let aa=b=>b*b
+
+console.log(aa(5));
+
+
+
+
+
+let pass=(marks)=>{
+
+    return marks>=35 ? "passed":"not passed"
+
+}
+
+console.log(pass(35));
+
+
+
+
+
+2)
+
+class stu{
+
+
+
+    constructor(name){
+
+        this.name=name
+
+
+
+    }
+
+
+
+
+
+    eligibleforplacements=(marks)=>{
+
+
+
+return (age)=>{
+
+
+
+  return age>=20&&marks>=35?`${this.name } is elible for interview ? true`:`${this.name} is not elible ? false `;
+
+}
+
+
+
+  }
+
+}
+
+
+
+let checkperson=new stu("paruchuri")
+
+
+
+let elig=checkperson.eligibleforplacements(35)
+
+console.log(elig(25));3)t
+
