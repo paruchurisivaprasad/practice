@@ -1,0 +1,395 @@
+1)
+
+
+
+ let posts=[]
+
+
+
+let getPosts=()=>{
+
+    setInterval(()=>{
+
+        let output=''
+
+
+
+        posts.forEach((post)=>{
+
+
+
+            output+=`<li>${post.title} created ${Math.floor( (new Date().getTime()- post.Time)/1000) } seconds ago </li>`
+
+
+
+        })
+
+
+
+        document.body.innerHTML=output
+
+    },1000)
+
+}
+
+let promiseCreatePost=(post)=>{
+
+    return new Promise((resolve,reject)=>{
+
+
+
+
+
+        setTimeout(()=>{
+
+
+
+            posts.push({...post,})
+
+
+
+
+
+            let err=false
+
+
+
+            if(!err)
+
+{
+
+    resolve()
+
+
+
+}    
+
+else{
+
+
+
+    reject('error : something went wrong')
+
+
+
+}   
+
+ },10)
+
+
+
+
+
+    })
+
+}
+
+
+
+promiseCreatePost({title:"post 1 ",body:"this is post 1",Time:new Date().getTime()})
+
+.then(getPosts)
+
+2)
+
+
+
+let deletePosts=()=>{
+
+
+
+    return new Promise((resolve,reject)=>{
+
+
+
+  
+
+    setTimeout(() => {
+
+
+
+        posts.pop()
+
+        
+
+    }, 1000);
+
+
+
+    let error=false
+
+    if(!error){
+
+        resolve("1 post deleted")
+
+    }
+
+    else{
+
+
+
+        reject("1 post deleted")
+
+
+
+    }
+
+
+
+})
+
+}
+
+
+
+deletePosts().then((message)=>{
+
+    console.log(message);
+
+})
+
+.catch(error=>{
+
+    console.log(error);
+
+})
+
+
+
+3)
+
+let deletePosts=()=>{
+
+    
+
+
+
+    return new Promise((resolve,reject)=>{
+
+
+
+  
+
+    setTimeout(() => {
+
+
+
+        posts.pop()
+
+        
+
+    }, 1000);
+
+
+
+    if(posts.length>=1){
+
+        
+
+        resolve(`${1} post deleted`)
+
+    }
+
+    else{
+
+
+
+        reject("posts are empty")
+
+
+
+    }
+
+
+
+})
+
+}
+
+
+
+deletePosts().then((message)=>{
+
+    console.log(message);
+
+})
+
+.catch(error=>{
+
+    console.log(error);
+
+})
+
+
+
+4)
+
+let promiseCreatePost=(post)=>{
+
+    return new Promise((resolve,reject)=>{
+
+
+
+
+
+        setTimeout(()=>{
+
+
+
+            posts.push({...post,})
+
+            posts.pop()
+
+
+
+
+
+            let err=false
+
+
+
+            if(!err)
+
+{
+
+    resolve()
+
+
+
+}    
+
+else{
+
+
+
+    reject('error : something went wrong')
+
+
+
+}   
+
+ },10)
+
+
+
+
+
+    })
+
+}
+
+
+
+promiseCreatePost({title:"post 1 ",body:"this is post 1",Time:new Date().getTime()})
+
+.then(getPosts)
+
+
+
+
+
+5)
+
+let promiseCreatePost=(post)=>{
+
+    return new Promise((resolve,reject)=>{
+
+
+
+
+
+        setTimeout(()=>{
+
+
+
+            posts.push({...post,})
+
+            posts.pop()
+
+
+
+
+
+            let err=false
+
+
+
+            if(!err)
+
+{
+
+    resolve()
+
+
+
+}    
+
+else{
+
+
+
+    reject('error : something went wrong')
+
+
+
+}   
+
+ },10)
+
+
+
+
+
+    })
+
+}
+
+
+
+promiseCreatePost({title:"post 1 ",body:"this is post 1",Time:new Date().getTime()})
+
+.then(()=>{
+
+    posts.pop()
+
+})
+
+
+
+
+
+1)
+
+
+
+
+
+let promise1= Promise.resolve('hello world');
+
+let promise2=10
+
+
+
+let promise3=new Promise((resolve,reject)=>{
+
+
+
+    setTimeout(resolve,1000," bye ")
+
+})
+
+
+
+Promise.all([promise1,promise2,promise3]).then((value)=>{
+
+    console.log(value);
+
+})
+
+
+
+
+
+
+
+
