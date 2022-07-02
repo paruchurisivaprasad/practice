@@ -1,0 +1,19 @@
+1)
+ headers carries meta data of api call . 
+ like content type.authourazation  tokens.while authontication
+  we send web takens in headers .... etc.......
+
+
+ 2)
+
+
+Axios is a popular, promise-based HTTP client that sports an easy-to-use API and can be used in both the browser and Node.js.
+axios is a connection from frontend to backend. 
+
+3)
+like choosing , wrong urls to make request.
+
+use network tab. first check url.post the same request in postman if you get success reponse there check your code 
+
+
+json. stringify => axios does it for us we don't need to put json.stringify in while sending payload
