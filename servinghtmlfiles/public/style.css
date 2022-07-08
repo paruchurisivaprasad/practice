@@ -1,0 +1,28 @@
+.listgroup{
+    text-transform: uppercase;
+    font-size: 20px;
+    list-style: none;
+    display: flex;
+    background-color: rgb(148, 0, 0);
+    color: white;
+    padding: 30px;
+}
+a{
+    text-decoration: none;
+color: white;
+font-weight: 700;
+}
+.reg{
+    background-color:rgb(113, 168, 9);
+    padding: 20px;
+    width: 50vw;
+    margin-left: 25vw;
+    border-radius: 20px;
+}
+#prod{
+width: 80%;
+padding: 5px;
+font-size: 20px;
+font-weight: 500;
+
+}
