@@ -1,0 +1,23 @@
+1)
+sql 
+
+The benefit of SQL is seen when your system needs a structured relational system. SQL thrives in circumstances that need high-quality and well-managed relational database systems.
+
+Multi-row transactions with complex queries and reporting, such as accounting and budget systems.
+
+nosql
+
+When there is a rapid growth of data, especially when dealing with unstructured information. Rapid data growth needs highly flexible data models to scale out the needs of that application.
+When your application needs fast reads and writes access to big data.
+When the application model has no defined schema or the data requirements, and the schemas are constantly evolving.
+
+
+2)
+vertical scaling
+
+by making current server powerfull by adding more cpu,memory.
+
+horizontal scaling
+by installing more servers 
+
+spliting data into multiple servers.
